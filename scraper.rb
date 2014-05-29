@@ -15,7 +15,10 @@ require 'date'
 require 'json'
 require 'yaml'
 
-id = "433"
+id = "870"
+
+# Milton Keynes 870
+# Walsall 433
 
 doc = Nokogiri::XML open("http://ratings.food.gov.uk/OpenDataFiles/FHRS#{id}en-GB.xml")
 
