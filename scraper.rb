@@ -34,7 +34,7 @@ end
 inspections.each do |i|
    if i["RatingValue"] == "Exempt"
       # skip
-   elseif i["RatingValue"] == "AwaitingInspection"
+   elsif i["RatingValue"] == "AwaitingInspection"
       # skip
    else   
     details = {}
