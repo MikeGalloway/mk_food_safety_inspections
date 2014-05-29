@@ -33,10 +33,10 @@ end
 
 inspections.each do |i|
    if i["RatingValue"] == "Exempt"
-      puts "skipping: Exempt id: " + i["FHTSID"] + "Name: " + i["BusinessName"]
+      puts "skipping: Exempt id: " + i["FHRSID"] + "Name: " + i["BusinessName"]
       # skip
    elsif i["RatingValue"] == "AwaitingInspection"
-      puts "skipping: Awaiting Inspection id: " + i["FHTSID"] + "Name: " + i["BusinessName"]
+      puts "skipping: Awaiting Inspection id: " + i["FHRSID"] + "Name: " + i["BusinessName"]
       # skip
    else   
     details = {}
