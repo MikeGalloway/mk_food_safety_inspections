@@ -32,6 +32,11 @@ doc.search('EstablishmentDetail').each do |i|
 end
 
 inspections.each do |i|
+   if i["RatingValue"] == "Exempt"
+      # skip
+   elseif i["RatingValue"] == "AwaitingInspection"
+      # skip
+   else   
     details = {}
     details[:id] = i["FHRSID"]
     details[:councilid] = i["LocalAuthorityBusinessID"]
@@ -46,6 +51,6 @@ inspections.each do |i|
     details[:rss_date] = details[:date].strftime("%A, %d %b %Y %H:%M:%S %Z")
     details[:lat] = i["lat"]
     details[:lng] = i["lng"]
-    
-    ScraperWiki.save([:id], details)
+     ScraperWiki.save([:id], details)
+   end
 end
